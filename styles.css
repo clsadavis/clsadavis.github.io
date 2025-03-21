@@ -1,0 +1,36 @@
+:root{
+    --cerise: #D741A7;
+    --icterine: #F5F749;
+    --gunmetal: #232c33;
+    --powderblue: #A0C1D1;
+    --persianpink: #EB7BC0;
+}
+
+html{
+    /* height: 100%; */
+    width: 100%;
+}
+
+body{
+    background-color: var(--gunmetal);
+    color: white;
+    
+    border: solid lime;
+    /* width: 100%; */
+}
+
+.container{
+    height: 100%;
+    border: dotted purple;
+}
+
+.nav{
+    border: dotted 5px var(--icterine);
+}
+
+.banner{
+    border: solid 1px var(--cerise);
+    border-radius: 5px;
+    background-color: var(--cerise);
+    height: 30%;
+}
