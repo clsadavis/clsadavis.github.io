@@ -13,22 +13,42 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/portfolio.js"></script>
 </head>
-<body ng-app="portfolio">
+<body ng-app="portfolio" ng-controller="indexController">
     <div class="container">
         <div class="wrapper">
-            <div class="banner">
-                <div class="nav">
+            <button class="enter-btn" ng-click="landing()"><span class="emoji">⮕</span></button>
+            <div class="landing" ng-show="showLanding">
+                <div class="block-container">
+                    <div class="block-base block-1"></div>
+                    <div class="block-base block-2"></div>
+                    <div class="block-base block-3"></div>
+                    <div class="block-base block-4"></div>
+                    <div class="block-base block-5"></div>
+                    <div class="block-base block-6"></div>
+                    <div class="block-base block-7"></div>
+                    <div class="block-base block-8"></div>
+                </div> 
+                <div class="landing-text-container">
+                    <div class="landing-text">
+                        <h1 class="landing-text">Hi, I'm <span class="color-cycle">Carissa</span></h1>
+                        <div class="button-box">
+                            <button class="enter-btn" ng-click="landing()"><span class="emoji">⮕</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="showHome">
+                <!-- <div class="nav">
                     <button><a href="#!resume">Resume</a></button>
                     <h3><a href="#!resume">Resume</a></h3>
                     <button>Portfolio</button>
                     <button>Contact</button>
-                </div>
-                <div class="injectable">
-                    <div ng-view></div>
-                </div>
-                <div>
-                  <h1>Hello World</h1>  
-                </div>
+                </div> -->
+                <!-- <h1>Welcome to HOME PAGE</h1> -->
+                 <img src="./assets/under-construction.png" alt="">
+            </div>
+            <div class="injectable">
+                <div ng-view></div>
             </div>
         </div>
     </div>

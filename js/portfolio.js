@@ -1,5 +1,18 @@
 (function () {
-    var portfolio = angular.module("portfolio",["ngRoute"]);
+    var portfolio = angular.module("portfolio",["ngRoute"]).controller("indexController", function($scope){
+        $scope.showLanding = true;
+        $scope.showHome = false;
+
+        $scope.landing = function(){
+            if($scope.showLanding){
+                $scope.showLanding = false;
+                $scope.showHome = true;
+            } else {
+                $scope.showLanding = true;
+                $scope.showHome = false;
+            }
+        }
+    });
 
     portfolio.config(function ($routeProvider) {
         $routeProvider
@@ -7,7 +20,8 @@
                 templateUrl: "resume.html"
             })
             .otherwise("/home",{
-                templateUrl: "home.html"
+                templateUrl: "index.html",
+                controller: "indexController"
             });
     });
 })()
