@@ -1,3 +1,7 @@
+<!-- NOTES -- injectable portion is below the home styling currently. need to either
+ make the page scroll down, or make the home styling/page injectable as well, without 
+ losing the landing screen
+  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +13,16 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/portfolio.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
-<body ng-app="portfolio" ng-controller="indexController">
+<body ng-app="portfolio" ng-controller="indexController" > 
     <div class="container">
         <div class="wrapper">
             <button class="enter-btn" ng-click="landing()"><span class="emoji">⮕</span></button>
@@ -30,7 +39,7 @@
                 </div> 
                 <div class="landing-text-container">
                     <div class="landing-text">
-                        <h1 class="landing-text">Hi, I'm <span class="color-cycle">Carissa</span></h1>
+                        <h1 class="landing-text playfair-display-standard">Hi, I'm <span class="color-cycle">Carissa</span></h1>
                         <div class="button-box">
                             <button class="enter-btn" ng-click="landing()"><span class="emoji">⮕</span></button>
                         </div>
@@ -38,14 +47,49 @@
                 </div>
             </div>
             <div ng-show="showHome">
-                <!-- <div class="nav">
-                    <button><a href="#!resume">Resume</a></button>
-                    <h3><a href="#!resume">Resume</a></h3>
-                    <button>Portfolio</button>
-                    <button>Contact</button>
-                </div> -->
-                <!-- <h1>Welcome to HOME PAGE</h1> -->
-                 <img src="./assets/under-construction.png" alt="">
+                <div class="home-contain">
+                    <div class="home-wrap">
+                        <div class="home-main">
+                            <h3 class="job-title playfair-display-standard">Full-Stack Developer</h3>
+                            <h1 class="home-name playfair-display-standard">Carissa Davis</h1>
+                            <div class="home-nav-wrap">
+                                <div>
+                                    <button><a href="#!about">About</a></button>
+                                </div>
+                                <div>
+                                    <button><a href="#!portfolio">Portfolio</a></button>
+                                </div>
+                                <div>
+                                    <button><a href="#!resume">Resume</a></button>
+                                </div>
+                                <div>
+                                    <button><a href="#!contact">Contact</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="color-block-wrap">
+                            <div class="color-block n1"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n3"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n5"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n7"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n9"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n11"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n13"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n15"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n17"></div>
+                            <div class="color-block"></div>
+                            <div class="color-block n19"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="injectable">
                 <div ng-view></div>

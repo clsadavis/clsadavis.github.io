@@ -19,9 +19,15 @@
             .when("/resume",{
                 templateUrl: "resume.html"
             })
+            .when("/about",{
+                templateUrl: "about.html"
+            })
+            .when("/portfolio",{
+                templateUrl: "portfolio.html"
+            })
             .otherwise("/home",{
-                templateUrl: "index.html",
-                controller: "indexController"
+                templateUrl: "home.html",
+                
             });
     });
 })()
